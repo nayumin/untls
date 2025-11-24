@@ -65,6 +65,7 @@ jobs:
 
     - run: mkdir build -p && ls && pwd
     - run: GOOS=windows GOARCH=amd64 go build -o build/untls-windows-amd64.exe .
+    - run: GOOS=linux GOARCH=arm64 go build -o build/untls-linux-arm64 .
     - run: go build -o build/untls-linux-amd64 .
 
     - name: Make release if everything looks right
